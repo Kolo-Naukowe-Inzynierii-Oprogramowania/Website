@@ -44,10 +44,6 @@ export default async function Page({
 
     if(post) { return (
         <div className="px-6 py-32 lg:px-8">
-            <div
-                className="absolute inset-y-0 left-0 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[72deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:-mr-80 lg:-mr-96"
-                aria-hidden="true"
-            />
             <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
                 <ContentSection post={post} prevPost={prevPost} nextPost={nextPost} />
             </div>
