@@ -50,7 +50,7 @@ const navigation = {
 export default function DefaultFooter() {
     return (
         <footer>
-            <hr className={"mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8"} />
+            <hr className={"mt-12 sm:mt-12 xl:mx-auto xl:max-w-7xl xl:px-8"} />
             <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
                 <div className="mt-10 flex justify-center space-x-10">
                     {navigation.social.map((item) => (

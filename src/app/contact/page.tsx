@@ -1,7 +1,13 @@
+import React from "react";
+
 export default function Contact() {
     return (
-        <div className="bg-white py-24 sm:py-32">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-24">
+        <div className="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20 pt-32 px:6lg:px-8">
+            <div
+                className="absolute inset-y-0 left-0 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[69deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:-mr-80 lg:-mr-96"
+                aria-hidden="true"
+            />
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-24">
                 <div className="mx-auto max-w-2xl space-y-16 divide-y divide-gray-100 lg:mx-0 lg:max-w-none">
                     <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
                         <div>

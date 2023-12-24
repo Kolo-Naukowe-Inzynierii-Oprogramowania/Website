@@ -83,12 +83,7 @@ export default function DefaultHeader() {
                         </button>
                     </div>
                     <Popover.Group className="hidden lg:flex lg:gap-x-12">
-                        {/*<Link
-                            href="/cele"
-                            className="text-sm font-semibold leading-6 text-gray-900"
-                        >
-                            Cele Koła
-                        </Link>
+                        {/*
                         <Link
                             href="/zarzad"
                             className="text-sm font-semibold leading-6 text-gray-900"
@@ -162,6 +157,13 @@ export default function DefaultHeader() {
                         </Popover>
 
                         <Link
+                            href="/blog/page/1"
+                            className="text-sm font-semibold leading-6 text-gray-900"
+                        >
+                            Blog
+                        </Link>
+
+                        <Link
                             href="/contact"
                             className="text-sm font-semibold leading-6 text-gray-900"
                         >
@@ -202,12 +204,8 @@ export default function DefaultHeader() {
                         <div className="-my-6 divide-y divide-gray-500/10">
                             <div className="space-y-2 py-6">
                                 {/*
-                                <Link
-                                    href="/cele"
-                                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                >
-                                    Cele Koła
-                                </Link>
+
+
                                 <Link
                                     href="/zarzad"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
@@ -248,6 +246,13 @@ export default function DefaultHeader() {
                                         </>
                                     )}
                                 </Disclosure>
+
+                                <Link
+                                    href="/blog/page/1"
+                                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                >
+                                    Blog
+                                </Link>
 
                                 <Link
                                     href="/contact"

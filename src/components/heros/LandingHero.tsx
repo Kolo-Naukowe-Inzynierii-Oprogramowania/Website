@@ -78,6 +78,13 @@ export default function LandingHero() {
                                     Prezentacja inauguracyjna{' '}
                                     <span aria-hidden="true">→</span>
                                 </Link>
+                                <Link
+                                    href="/course/szkolenie-wstepne"
+                                    className="text-sm font-semibold leading-6 text-gray-900"
+                                >
+                                    Szkolenie wstępne{' '}
+                                    <span aria-hidden="true">→</span>
+                                </Link>
                             </div>
                         </div>
                         <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
