@@ -19,7 +19,7 @@ export default async function Page({
         });
         categoryData = res1.data;
 
-        const res = await axios.get(`https://strapi.assts.tech/api/blog-posts?populate=*&filters[categories][slug][$containsi]=${category}&pagination[pageSize]=5&pagination[page]=${page || 1}`, {
+        const res = await axios.get(`https://strapi.assts.tech/api/blog-posts?populate=*&filters[categories][slug][$containsi]=${category}&pagination[pageSize]=5&pagination[page]=${page || 1}&sort=createdAt:asc`, {
             headers: {
                 // public get token
                 Authorization: "bearer e46fcfc6fcf6985476227d1024c3afcff3625f1482b959b4855a8d1e1c1efa6d956da82422d12ffb4a9235bbd5470be932358c3f3564da7878a230646115cde8315c2461e91f5d96e4148088c8e90b4aea7aa8e6f7f1d4fca8db3576b2ce93d3c5bd6b7cc5be67a89f6b0a4f56302c3c331026b2892a77e7ca468a71cf36de24",
