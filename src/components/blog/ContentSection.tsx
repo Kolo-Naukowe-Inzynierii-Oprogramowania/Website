@@ -69,9 +69,23 @@ export default function ContentSection({
                     }}
                 />
             </div>
+            <hr className={"my-12"} />
+            <div className={`flex justify-center items-center ${(prevPost || nextPost) && "mb-6"}`}>
+                {
+                    post.attributes.isCourse ? (
+                        <p className={"text-gray-900"}>
+                            Nawigacja dla <a className={"color-primary"} href={`/course/${post.attributes.course.data.attributes.slug}`}>{post.attributes.course.data.attributes.name}</a>:
+                        </p>
+                    ) : (
+                        <p className={"text-gray-900"}>
+                            Nawigacja dla artykułów z bloga:
+                        </p>
+                    )
+                }
+            </div>
             {
                 (prevPost || nextPost) && (
-                    <div className={"flex justify-between mt-20 w-full"}>
+                    <div className={"flex justify-between w-full"}>
                         <div className="w-1/2 text-left">
                             {
                                 prevPost ? (
