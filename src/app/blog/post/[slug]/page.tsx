@@ -54,7 +54,7 @@ export default async function Page({
     }
 
     if(post) { return (
-        <div className="px-6 py-32 lg:px-8">
+        <div className="px-6 pt-32 lg:px-8">
             <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
                 <ContentSection post={post} prevPost={prevPost} nextPost={nextPost} />
             </div>
