@@ -113,9 +113,6 @@ export default function ContentSection({
                     </div>
                 )
             }
-            {
-
-            }
         </article>
     )
 }
