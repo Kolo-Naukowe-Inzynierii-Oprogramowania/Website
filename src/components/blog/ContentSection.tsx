@@ -78,7 +78,7 @@ export default function ContentSection({
                         </p>
                     ) : (
                         <p className={"text-gray-900"}>
-                            Nawigacja dla artykułów z bloga:
+                            Nawigacja dla artykułów z Bloga KNIO:
                         </p>
                     )
                 }
