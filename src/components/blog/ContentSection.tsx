@@ -69,7 +69,9 @@ export default function ContentSection({
                     }}
                 />
             </div>
-            <hr className={"my-12"} />
+            {
+                (prevPost || nextPost) && <hr className={"my-12"} />
+            }
             <div className={`flex justify-center items-center ${(prevPost || nextPost) && "mb-12"}`}>
                 {
                     post.attributes.isCourse ? (
@@ -110,6 +112,9 @@ export default function ContentSection({
                         </div>
                     </div>
                 )
+            }
+            {
+
             }
         </article>
     )
