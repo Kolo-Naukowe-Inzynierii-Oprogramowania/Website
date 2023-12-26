@@ -70,7 +70,7 @@ export default function ContentSection({
                 />
             </div>
             <hr className={"my-12"} />
-            <div className={`flex justify-center items-center ${(prevPost || nextPost) && "mb-6"}`}>
+            <div className={`flex justify-center items-center ${(prevPost || nextPost) && "mb-12"}`}>
                 {
                     post.attributes.isCourse ? (
                         <p className={"text-gray-900"}>
