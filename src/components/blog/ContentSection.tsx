@@ -64,7 +64,7 @@ export default function ContentSection({
                 )
             }
             <div className={"flex justify-center items-center pt-10"}>
-                <div className="prose" dangerouslySetInnerHTML={{
+                <div className="prose max-w-full" dangerouslySetInnerHTML={{
                         __html: post.attributes.content
                     }}
                 />
