@@ -22,6 +22,10 @@ export default async function Page({
         return <NotFoundComponent />
     }
 
+    if(!post) {
+        return <NotFoundComponent />
+    }
+
     if(post.attributes.isCourse) {
         prevPost = post.attributes.course_prev.data;
         nextPost = post.attributes.course_next.data;
