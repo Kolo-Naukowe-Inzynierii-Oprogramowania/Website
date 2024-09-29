@@ -61,7 +61,7 @@ export default function DefaultFooter() {
                     ))}
                 </div>
                 <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-                    &copy; 2023 Koło Naukowe Inżynierii Oprogramowania. Wszelkie prawa zastrzeżone.
+                    &copy; 2024 Koło Naukowe Inżynierii Oprogramowania. Wszelkie prawa zastrzeżone.
                 </p>
                 <p className="mt-1 text-center text-xs leading-5 text-gray-500">
                     Koło Naukowe Inżynierii Oprogramowania jest organizacją studencką działającą na terenie Politechniki Białostockiej.

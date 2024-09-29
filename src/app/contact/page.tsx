@@ -18,24 +18,27 @@ export default function Contact() {
                                 Odezwij się do nas, jeśli masz jakieś pytania
                                 lub chcesz się z nami skontaktować.
                             </p>
+                            <p className="mt-4 leading-7 text-gray-600">
+                                W sprawach rekrutacji oraz funkcjonowania KNIO,
+                                prosimy o kontakt z Przewodniczącym.
+                            </p>
                         </div>
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
                             <div className="rounded-2xl bg-gray-50 p-10">
                                 <h3 className="text-base font-semibold leading-7 text-gray-900">
-                                    Zarząd
+                                    Opiekun Naukowy
                                 </h3>
-                                <p>
-                                    Ogólne zapytania i wnioski do Zarządu KNIO
-                                </p>
+                                <p>dr inż. Marcin Koźniewski</p>
                                 <dl className="mt-3 space-y-1 text-sm leading-6 text-gray-600">
                                     <div>
-                                        <dt className="sr-only">Email</dt>
+                                        <dt className="sr-only">USOSweb</dt>
                                         <dd>
                                             <a
                                                 className="font-semibold text-indigo-600"
-                                                href="mailto:zarzad@knio.assts.tech"
+                                                target={"_blank"}
+                                                href="https://usosweb.pb.edu.pl/kontroler.php?_action=katalog2/osoby/pokazOsobe&os_id=10024"
                                             >
-                                                zarzad@knio.assts.tech
+                                                USOSweb
                                             </a>
                                         </dd>
                                     </div>
@@ -52,9 +55,9 @@ export default function Contact() {
                                         <dd>
                                             <a
                                                 className="font-semibold text-indigo-600"
-                                                href="mailto:marcin.kondrat@assts.tech"
+                                                href="mailto:marcin.kondrat@sspb.pl"
                                             >
-                                                marcin.kondrat@assts.tech
+                                                marcin.kondrat@sspb.pl
                                             </a>
                                         </dd>
                                     </div>
@@ -71,9 +74,9 @@ export default function Contact() {
                                         <dd>
                                             <a
                                                 className="font-semibold text-indigo-600"
-                                                href="mailto:jowita.ochrymiuk@assts.tech"
+                                                href="mailto:jowita.ochrymiuk@sspb.pl"
                                             >
-                                                jowita.ochrymiuk@assts.tech
+                                                jowita.ochrymiuk@sspb.pl
                                             </a>
                                         </dd>
                                     </div>
@@ -90,9 +93,9 @@ export default function Contact() {
                                         <dd>
                                             <a
                                                 className="font-semibold text-indigo-600"
-                                                href="mailto:karol.karwowski@assts.tech"
+                                                href="mailto:89118@student.pb.edu.pl"
                                             >
-                                                karol.karwowski@assts.tech
+                                                89118@student.pb.edu.pl
                                             </a>
                                         </dd>
                                     </div>
@@ -101,7 +104,7 @@ export default function Contact() {
                         </div>
                     </div>
                 </div>
-            </div>
+        </div>
         </div>
     );
 }

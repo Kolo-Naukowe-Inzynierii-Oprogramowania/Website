@@ -1,65 +1,25 @@
-import axios from "axios";
-import ContentSection from "@/components/blog/ContentSection";
-import React from "react";
-import NotFoundComponent from "@/components/content/NotFoundComponent";
-import {next} from "sucrase/dist/types/parser/tokenizer";
+import React from 'react';
 
-export default async function Page({
-                                         params: { slug },
-                                     }: {
-    params: { slug: string }
-}) {
-    let post, prevPost, nextPost;
-    try {
-        const res = await axios.get(`https://strapi.assts.tech/api/blog-posts?filters[slug][$eq]=${slug}&populate=*`, {
-            headers: {
-                // public get token
-                Authorization: "bearer e46fcfc6fcf6985476227d1024c3afcff3625f1482b959b4855a8d1e1c1efa6d956da82422d12ffb4a9235bbd5470be932358c3f3564da7878a230646115cde8315c2461e91f5d96e4148088c8e90b4aea7aa8e6f7f1d4fca8db3576b2ce93d3c5bd6b7cc5be67a89f6b0a4f56302c3c331026b2892a77e7ca468a71cf36de24",
-            },
-        });
-        post = res.data.data[0];
-    }catch (e: any){
-        return <NotFoundComponent />
-    }
+export default async function Page() {
 
-    if(!post) {
-        return <NotFoundComponent />
-    }
-
-    if(post.attributes.isCourse) {
-        prevPost = post.attributes.course_prev.data;
-        nextPost = post.attributes.course_next.data;
-    } else {
-        try {
-            const res = await axios.get(`https://strapi.assts.tech/api/blog-posts?filters[createdAt][$lt]=${post.attributes.createdAt}&sort=createdAt:desc&populate=*&filters[isCourse][$eq]=false`, {
-                headers: {
-                    // public get token
-                    Authorization: "bearer e46fcfc6fcf6985476227d1024c3afcff3625f1482b959b4855a8d1e1c1efa6d956da82422d12ffb4a9235bbd5470be932358c3f3564da7878a230646115cde8315c2461e91f5d96e4148088c8e90b4aea7aa8e6f7f1d4fca8db3576b2ce93d3c5bd6b7cc5be67a89f6b0a4f56302c3c331026b2892a77e7ca468a71cf36de24",
-                }
-            });
-            prevPost = res.data.data[0];
-        } catch {
-        }
-
-        try {
-            const res = await axios.get(`https://strapi.assts.tech/api/blog-posts?filters[createdAt][$gt]=${post.attributes.createdAt}&sort=createdAt:asc&populate=*&filters[isCourse][$eq]=false`, {
-                headers: {
-                    // public get token
-                    Authorization: "bearer e46fcfc6fcf6985476227d1024c3afcff3625f1482b959b4855a8d1e1c1efa6d956da82422d12ffb4a9235bbd5470be932358c3f3564da7878a230646115cde8315c2461e91f5d96e4148088c8e90b4aea7aa8e6f7f1d4fca8db3576b2ce93d3c5bd6b7cc5be67a89f6b0a4f56302c3c331026b2892a77e7ca468a71cf36de24",
-                }
-            });
-            nextPost = res.data.data[0];
-        } catch {
-        }
-    }
-
-    if(post) { return (
-        <div className="px-6 pt-32 lg:px-8">
+    return (
+        <div className="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20 pt-32  px:6lg:px-8">
+            <div
+                className="absolute inset-y-0 left-0 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[72deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:-mr-80 lg:-mr-96"
+                aria-hidden="true"
+            />
             <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-                <ContentSection post={post} prevPost={prevPost} nextPost={nextPost} />
+                <div className="pt-24 sm:pt-32">
+                    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                        <div className="mx-auto max-w-2xl lg:max-w-4xl">
+                            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Blog</h2>
+                            <h3 className="text-xl mt-2 tracking-tight text-gray-800 sm:text-2xl">
+                                Strona w trakcie przebudowy...
+                            </h3>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    ) } else {
-        return <NotFoundComponent />
-    }
+    );
 }
